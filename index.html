@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 1: Web Architecture & Semantic HTML5</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article, .multimedia-container, .form-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .form-card {
+      max-width: 450px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Inline -->
+    <h1 style="color: #0056b3;">Web Architecture & Semantic HTML5</h1>
+    
+    <nav>
+      <a href="#architecture">Web Architecture</a> | 
+      <a href="#multimedia">Multimedia</a> | 
+      <a href="#form-section">Form Validation</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Web Architecture -->
+    <section id="architecture">
+      <h2>1. Web Architecture Concepts</h2>
+      
+      <article class="article">
+        <h3>Client-Server Model</h3>
+        <p>The Client (your browser) sends a request, and the Server returns the web page response.</p>
+      </article>
+
+      <article class="article">
+        <h3>DNS (Domain Name System)</h3>
+        <p>Translates human-friendly domain names (like example.com) into numeric IP addresses.</p>
+      </article>
+
+      <article class="article">
+        <h3>HTTP vs. HTTPS</h3>
+        <p>HTTP sends data in plain text, while HTTPS encrypts data securely using SSL/TLS.</p>
+      </article>
+    </section>
+
+    <!-- Multimedia -->
+    <section id="multimedia">
+      <h2>2. HTML5 Multimedia</h2>
+      <div class="multimedia-container">
+        <p><strong>Audio Tag:</strong></p>
+        <audio controls>
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p><strong>Video Tag:</strong></p>
+        <video width="320" height="240" controls style="border: 2px solid #0056b3; border-radius: 4px;">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- Form & Native Validation -->
+    <section id="form-section">
+      <h2>3. HTML5 Form & Native Validation</h2>
+      <form class="form-card" action="#" method="POST">
+        
+        <div class="form-group">
+          <label for="fullname">Full Name (Required):</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address (Native Validation):</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="protocol">Which protocol uses encryption?</label>
+          <select id="protocol" name="protocol" required>
+            <option value="" disabled selected>- Select an Option -</option>
+            <option value="http">HTTP</option>
+            <option value="https">HTTPS</option>
+            <option value="ftp">FTP</option>
+          </select>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" style="background-color: #0056b3; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer;">
+          Submit Form
+        </button>
+
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
